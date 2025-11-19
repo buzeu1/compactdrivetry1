@@ -599,7 +599,7 @@
 
         /* Story Section - NEW */
         .story-section {
-            padding: 100px 2rem;
+            padding: 120px 2rem;
             background: linear-gradient(135deg, var(--bg-dark) 0%, var(--bg-card) 100%);
             position: relative;
             overflow: hidden;
@@ -619,123 +619,142 @@
             max-width: 1400px;
             margin: 0 auto;
             display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 5rem;
-            align-items: center;
+            grid-template-columns: 1.2fr 1fr;
+            gap: 6rem;
+            align-items: start;
         }
 
         .story-content h2 {
             font-family: 'Raleway', sans-serif;
-            font-size: 3rem;
-            margin-bottom: 1.5rem;
+            font-size: 3.5rem;
+            margin-bottom: 2rem;
             background: var(--gradient-main);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             font-weight: 900;
+            line-height: 1.2;
         }
 
         .story-content p {
-            font-size: 1.1rem;
-            line-height: 1.9;
+            font-size: 1.15rem;
+            line-height: 2;
             color: var(--text-gray);
-            margin-bottom: 1.5rem;
+            margin-bottom: 2rem;
         }
 
         .story-highlights {
             display: grid;
-            gap: 1.5rem;
-            margin-top: 3rem;
+            gap: 2rem;
+            margin-top: 3.5rem;
         }
 
         .highlight-item {
             display: flex;
             align-items: start;
-            gap: 1.5rem;
-            padding: 1.5rem;
+            gap: 2rem;
+            padding: 2rem;
             background: var(--bg-card);
-            border-radius: 20px;
-            border-left: 4px solid var(--primary);
+            border-radius: 24px;
+            border-left: 5px solid var(--primary);
             transition: all 0.3s ease;
+            box-shadow: var(--shadow-sm);
         }
 
         .highlight-item:hover {
-            transform: translateX(10px);
+            transform: translateX(15px);
             background: var(--bg-light);
             border-left-color: var(--secondary);
+            box-shadow: var(--shadow-md);
         }
 
         .highlight-icon {
-            width: 60px;
-            height: 60px;
+            width: 70px;
+            height: 70px;
             background: var(--gradient-main);
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 1.8rem;
+            font-size: 2rem;
             flex-shrink: 0;
             box-shadow: var(--glow-blue);
         }
 
         .highlight-text h4 {
-            font-size: 1.3rem;
-            margin-bottom: 0.5rem;
+            font-size: 1.4rem;
+            margin-bottom: 0.8rem;
             color: var(--text-light);
+            font-weight: 700;
         }
 
         .highlight-text p {
-            font-size: 1rem;
+            font-size: 1.05rem;
             color: var(--text-gray);
             margin: 0;
+            line-height: 1.7;
         }
 
         .story-stats {
             background: var(--bg-card);
             border-radius: 30px;
-            padding: 3rem;
+            padding: 3.5rem;
             box-shadow: var(--shadow-xl);
             border: 2px solid rgba(255, 255, 255, 0.05);
+            position: sticky;
+            top: 120px;
         }
 
         .story-stats h3 {
-            font-size: 2rem;
-            margin-bottom: 2rem;
+            font-size: 2.2rem;
+            margin-bottom: 3rem;
             text-align: center;
             color: var(--text-light);
+            font-weight: 800;
         }
 
         .timeline {
             display: grid;
-            gap: 2rem;
+            gap: 2.5rem;
         }
 
         .timeline-item {
             display: flex;
-            gap: 1.5rem;
+            gap: 2rem;
             align-items: start;
+            padding-bottom: 2rem;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .timeline-item:last-child {
+            border-bottom: none;
+            padding-bottom: 0;
         }
 
         .timeline-year {
-            font-size: 2.5rem;
+            font-size: 3rem;
             font-weight: 900;
             background: var(--gradient-gold);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
-            min-width: 100px;
+            min-width: 120px;
+            line-height: 1;
         }
 
         .timeline-content h4 {
-            font-size: 1.2rem;
-            margin-bottom: 0.5rem;
+            font-size: 1.35rem;
+            margin-bottom: 0.6rem;
             color: var(--text-light);
+            font-weight: 700;
         }
 
         .timeline-content p {
             color: var(--text-gray);
             margin: 0;
+            font-size: 1.05rem;
+            line-height: 1.6;
         }
 
-        /* Vehicles Section - Dark */
+        /* Services Section - MODIFIED */
         .vehicles-section {
             padding: 80px 2rem;
             background: var(--bg-dark);
@@ -1098,100 +1117,118 @@
 
         /* Contact Section - Dark */
         .contact-section {
-            padding: 80px 2rem;
+            padding: 100px 2rem;
             background: var(--bg-dark);
             border-top: 1px solid rgba(255, 255, 255, 0.05);
         }
 
         .contact-container {
-            max-width: 1200px;
+            max-width: 1300px;
             margin: 0 auto;
             display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 3rem;
+            grid-template-columns: 0.9fr 1.1fr;
+            gap: 4rem;
         }
 
         .contact-info {
             display: flex;
             flex-direction: column;
-            gap: 1.5rem;
+            gap: 1.8rem;
         }
 
         .contact-card {
             background: var(--bg-card);
-            border-radius: 16px;
-            padding: 1.5rem;
+            border-radius: 20px;
+            padding: 2rem;
             display: flex;
             align-items: center;
-            gap: 1.5rem;
+            gap: 2rem;
             box-shadow: var(--shadow-sm);
             transition: all 0.3s ease;
-            border: 1px solid rgba(255, 255, 255, 0.05);
+            border: 2px solid rgba(255, 255, 255, 0.05);
         }
 
         .contact-card:hover {
-            transform: translateX(10px);
+            transform: translateX(12px);
             box-shadow: var(--glow-blue);
             background: var(--bg-light);
             border-color: var(--primary);
         }
 
         .contact-icon {
-            width: 55px;
-            height: 55px;
+            width: 65px;
+            height: 65px;
             background: var(--gradient-main);
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
             color: white;
-            font-size: 1.3rem;
+            font-size: 1.5rem;
             flex-shrink: 0;
             box-shadow: var(--glow-blue);
         }
 
         .contact-details h3 {
-            font-size: 1.1rem;
+            font-size: 1.2rem;
             color: var(--text-light);
-            margin-bottom: 0.3rem;
+            margin-bottom: 0.5rem;
+            font-weight: 700;
         }
 
         .contact-details p {
             color: var(--text-gray);
-            font-size: 0.95rem;
+            font-size: 1rem;
+            line-height: 1.6;
+        }
+
+        .contact-details a {
+            color: var(--text-gray);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .contact-details a:hover {
+            color: var(--primary);
         }
 
         .contact-form {
             background: var(--bg-card);
-            border-radius: 24px;
-            padding: 2.5rem;
+            border-radius: 28px;
+            padding: 3rem;
             box-shadow: var(--shadow-md);
-            border: 1px solid rgba(255, 255, 255, 0.05);
+            border: 2px solid rgba(255, 255, 255, 0.05);
         }
 
         .form-group {
-            margin-bottom: 1.5rem;
+            margin-bottom: 1.8rem;
         }
 
         .form-group label {
             display: block;
-            margin-bottom: 0.5rem;
+            margin-bottom: 0.7rem;
             color: var(--text-light);
             font-weight: 600;
-            font-size: 0.9rem;
+            font-size: 0.95rem;
         }
 
         .form-group input,
         .form-group textarea,
         .form-group select {
             width: 100%;
-            padding: 0.9rem;
+            padding: 1rem 1.2rem;
             background: var(--bg-light);
             border: 2px solid rgba(255, 255, 255, 0.05);
-            border-radius: 12px;
+            border-radius: 14px;
             color: var(--text-light);
             font-size: 1rem;
             transition: all 0.3s ease;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        .form-group textarea {
+            resize: vertical;
+            min-height: 120px;
         }
 
         .form-group input:focus,
@@ -1205,23 +1242,24 @@
 
         .form-submit {
             width: 100%;
-            padding: 1.1rem;
+            padding: 1.2rem;
             background: var(--gradient-gold);
             color: white;
             border: none;
             border-radius: 50px;
-            font-size: 1rem;
+            font-size: 1.05rem;
             font-weight: 700;
             cursor: pointer;
             transition: all 0.3s ease;
             text-transform: uppercase;
             letter-spacing: 1px;
             box-shadow: var(--glow-gold);
+            margin-top: 0.5rem;
         }
 
         .form-submit:hover {
             transform: translateY(-3px);
-            box-shadow: 0 10px 25px rgba(245, 158, 11, 0.5);
+            box-shadow: 0 10px 30px rgba(245, 158, 11, 0.5);
         }
 
         /* Footer - Dark */
@@ -1342,7 +1380,7 @@
             .hero-container,
             .story-container {
                 grid-template-columns: 1fr;
-                gap: 2.5rem;
+                gap: 3rem;
             }
 
             .hero-content {
@@ -1373,6 +1411,16 @@
 
             .contact-container {
                 grid-template-columns: 1fr;
+                gap: 3rem;
+            }
+
+            .story-stats {
+                position: relative;
+                top: 0;
+            }
+
+            .story-content h2 {
+                font-size: 2.8rem;
             }
         }
 
@@ -1459,8 +1507,67 @@
                 text-align: center;
             }
 
+            .story-section {
+                padding: 80px 1.5rem;
+            }
+
             .story-content h2 {
-                font-size: 2rem;
+                font-size: 2.2rem;
+            }
+
+            .story-content p {
+                font-size: 1.05rem;
+            }
+
+            .highlight-item {
+                padding: 1.5rem;
+                gap: 1.5rem;
+            }
+
+            .highlight-icon {
+                width: 60px;
+                height: 60px;
+                font-size: 1.8rem;
+            }
+
+            .highlight-text h4 {
+                font-size: 1.2rem;
+            }
+
+            .story-stats {
+                padding: 2.5rem 1.5rem;
+            }
+
+            .story-stats h3 {
+                font-size: 1.8rem;
+            }
+
+            .timeline-year {
+                font-size: 2.2rem;
+                min-width: 80px;
+            }
+
+            .timeline-content h4 {
+                font-size: 1.15rem;
+            }
+
+            .contact-section {
+                padding: 80px 1.5rem;
+            }
+
+            .contact-card {
+                padding: 1.5rem;
+                gap: 1.5rem;
+            }
+
+            .contact-icon {
+                width: 55px;
+                height: 55px;
+                font-size: 1.3rem;
+            }
+
+            .contact-form {
+                padding: 2.5rem 1.8rem;
             }
         }
 
@@ -1493,6 +1600,51 @@
 
             .stat-label {
                 font-size: 0.75rem;
+            }
+
+            .story-content h2 {
+                font-size: 1.9rem;
+            }
+
+            .story-content p {
+                font-size: 1rem;
+            }
+
+            .highlight-item {
+                flex-direction: column;
+                text-align: center;
+                padding: 1.5rem;
+            }
+
+            .highlight-icon {
+                margin: 0 auto;
+            }
+
+            .timeline-item {
+                flex-direction: column;
+                gap: 1rem;
+                text-align: center;
+            }
+
+            .timeline-year {
+                font-size: 2rem;
+            }
+
+            .contact-card {
+                flex-direction: column;
+                text-align: center;
+                padding: 1.5rem;
+            }
+
+            .contact-form {
+                padding: 2rem 1.5rem;
+            }
+
+            .form-group input,
+            .form-group textarea,
+            .form-group select {
+                padding: 0.9rem 1rem;
+                font-size: 0.95rem;
             }
         }
     </style>
@@ -1553,7 +1705,7 @@
                         <div class="stat-label">Absolvenți</div>
                     </div>
                     <div class="stat-card">
-                        <div class="stat-number">15+</div>
+                        <div class="stat-number">5+</div>
                         <div class="stat-label">Ani Experiență</div>
                     </div>
                     <div class="stat-card">
@@ -1605,12 +1757,14 @@
             <div class="story-content">
                 <h2>Povestea Noastră</h2>
                 <p>
-                    Compact Drive a început în 2010 dintr-o pasiune simplă: să oferim educație rutieră de cea mai înaltă 
-                    calitate în Roman. De-a lungul anilor, am format peste 5000 de șoferi responsabili și profesioniști.
+                    Compact Drive a luat naștere în 2020 din dorința de a revoluționa educația rutieră în Roman. 
+                    Pornind cu o viziune clară și o pasiune autentică pentru siguranța rutieră, am reușit să creăm 
+                    cea mai inovativă și apreciată școală de șoferi din oraș.
                 </p>
                 <p>
-                    Astăzi, după 15 ani de experiență, suntem mândri să fim școala de șoferi #1 din oraș, recunoscută 
-                    pentru standardele înalte, instructorii dedicați și rata de promovare impresionantă de 98%.
+                    În doar câțiva ani, am format mii de șoferi responsabili și am devenit lider de piață, 
+                    fiind recunoscuți pentru standardele înalte, instructorii dedicați, metodele moderne de predare 
+                    și rata excepțională de promovare de 98%. Fiecare elev este o poveste de succes!
                 </p>
 
                 <div class="story-highlights">
@@ -1618,21 +1772,21 @@
                         <div class="highlight-icon">🎯</div>
                         <div class="highlight-text">
                             <h4>Misiunea Noastră</h4>
-                            <p>Să formăm cei mai buni și mai responsabili conducători auto din România</p>
+                            <p>Să formăm cei mai buni și mai responsabili conducători auto din România, printr-o abordare modernă și personalizată</p>
                         </div>
                     </div>
                     <div class="highlight-item">
                         <div class="highlight-icon">💡</div>
                         <div class="highlight-text">
                             <h4>Viziunea Noastră</h4>
-                            <p>Să revoluționăm educația rutieră prin tehnologie și metode moderne de predare</p>
+                            <p>Să devenim standardul de excelență în educația rutieră prin tehnologie de ultimă oră și metode inovatoare</p>
                         </div>
                     </div>
                     <div class="highlight-item">
                         <div class="highlight-icon">❤️</div>
                         <div class="highlight-text">
                             <h4>Valorile Noastre</h4>
-                            <p>Profesionalism, dedicare, răbdare și respect pentru fiecare elev</p>
+                            <p>Profesionalism autentic, dedicare totală, răbdare nelimitată și respect profund pentru fiecare elev</p>
                         </div>
                     </div>
                 </div>
@@ -1642,31 +1796,31 @@
                 <h3>Parcursul Nostru</h3>
                 <div class="timeline">
                     <div class="timeline-item">
-                        <div class="timeline-year">2010</div>
-                        <div class="timeline-content">
-                            <h4>Început Modest</h4>
-                            <p>Prima locație și primii 50 de elevi</p>
-                        </div>
-                    </div>
-                    <div class="timeline-item">
-                        <div class="timeline-year">2015</div>
-                        <div class="timeline-content">
-                            <h4>Expansiune Rapidă</h4>
-                            <p>1000+ absolvenți și introducerea tehnologiei moderne</p>
-                        </div>
-                    </div>
-                    <div class="timeline-item">
                         <div class="timeline-year">2020</div>
                         <div class="timeline-content">
+                            <h4>Începutul Aventurii</h4>
+                            <p>Lansare oficială și primii 100 de elevi încrezători</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-year">2021</div>
+                        <div class="timeline-content">
+                            <h4>Creștere Rapidă</h4>
+                            <p>Peste 150 de absolvenți și introducerea tehnologiei moderne</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-year">2023</div>
+                        <div class="timeline-content">
                             <h4>Lider de Piață</h4>
-                            <p>Școala #1 din Roman cu 3000+ absolvenți</p>
+                            <p>Școala #1 din Roman cu peste 250 de absolvenți</p>
                         </div>
                     </div>
                     <div class="timeline-item">
                         <div class="timeline-year">2025</div>
                         <div class="timeline-content">
                             <h4>Excelență Continuă</h4>
-                            <p>5000+ absolvenți și 98% rată de promovare</p>
+                            <p>500+ absolvenți fericiți și 98% rată de promovare</p>
                         </div>
                     </div>
                 </div>
@@ -1674,14 +1828,15 @@
         </div>
     </section>
 
-    <!-- Vehicles Section -->
+    <!-- Services Section - MODIFIED -->
     <section class="vehicles-section">
         <div class="section-header">
-            <h2 class="section-title">Autovehiculele Noastre</h2>
-            <p class="section-subtitle">Mașini moderne pentru fiecare categorie de permis</p>
+            <h2 class="section-title">Serviciile Noastre</h2>
+            <p class="section-subtitle">Categorii de permis și servicii complete pentru șoferi</p>
         </div>
         
         <div class="vehicles-grid">
+            <!-- Categorii de Autovehicule -->
             <a href="autovehicule.html#cat-a" class="vehicle-card">
                 <div class="vehicle-icon">🏍️</div>
                 <h3 class="vehicle-category">A/A2</h3>
@@ -1701,6 +1856,28 @@
                 <div class="vehicle-icon">🚌</div>
                 <h3 class="vehicle-category">D</h3>
                 <p class="vehicle-type">Autobuze</p>
+            </a>
+            
+            <!-- Servicii Suplimentare -->
+            <a href="autovehicule.html#services" class="vehicle-card">
+                <div class="vehicle-icon">📚</div>
+                <h3 class="vehicle-category">Legislație</h3>
+                <p class="vehicle-type">Cursuri Complete</p>
+            </a>
+            <a href="autovehicule.html#services" class="vehicle-card">
+                <div class="vehicle-icon">🚗</div>
+                <h3 class="vehicle-category">Ore Condus</h3>
+                <p class="vehicle-type">Pregătire Practică</p>
+            </a>
+            <a href="autovehicule.html#services" class="vehicle-card">
+                <div class="vehicle-icon">📝</div>
+                <h3 class="vehicle-category">Examen</h3>
+                <p class="vehicle-type">Simulări & Teste</p>
+            </a>
+            <a href="autovehicule.html#services" class="vehicle-card">
+                <div class="vehicle-icon">🏥</div>
+                <h3 class="vehicle-category">Asistență</h3>
+                <p class="vehicle-type">Dosare & Documente</p>
             </a>
         </div>
     </section>
@@ -1877,7 +2054,7 @@
                     </div>
                     <div class="contact-details">
                         <h3>Email</h3>
-                        <p>contact@compactdrive.ro</p>
+                        <p><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="05666a6b7164667145666a687564667161776c73602b776a">[email&#160;protected]</a></p>
                     </div>
                 </div>
                 
@@ -1893,6 +2070,8 @@
             </div>
             
             <form class="contact-form" id="contactForm">
+                <h3 style="font-size: 1.8rem; margin-bottom: 1.5rem; color: var(--text-light); font-weight: 700; text-align: center;">Trimite-ne un Mesaj</h3>
+                
                 <div class="form-group">
                     <label for="name">Nume Complet</label>
                     <input type="text" id="name" name="name" required>
@@ -1938,10 +2117,10 @@
                 <h3>Compact Drive</h3>
                 <p>
                     Școala de șoferi numărul 1 din Roman. 
-                    15+ ani de experiență în formarea conducătorilor auto responsabili.
+                    5+ ani de experiență în formarea conducătorilor auto responsabili și profesioniști.
                 </p>
                 <div class="social-links">
-                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="https://www.facebook.com/compact.drive" target="_blank"><i class="fab fa-facebook"></i></a>
                     <a href="#"><i class="fab fa-instagram"></i></a>
                     <a href="#"><i class="fab fa-youtube"></i></a>
                     <a href="#"><i class="fab fa-tiktok"></i></a>
@@ -1986,7 +2165,7 @@
         </div>
     </footer>
 
-    <script>
+    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
         // Loading Screen - NEW
         window.addEventListener('load', function() {
             const loader = document.getElementById('loader');
@@ -2030,23 +2209,23 @@
         // Gallery Data - STUDENT PHOTOS
         const galleryData = [
             {
-                image: 'images/students/student1.jpg',
+                image: 'images/students/student1.png',
                 category: 'Categoria B'
             },
             {
-                image: 'images/students/student2.jpg',
+                image: 'images/students/student2.png',
                 category: 'Categoria A'
             },
             {
-                image: 'images/students/student3.jpg',
+                image: 'images/students/student3.png',
                 category: 'Categoria C'
             },
             {
-                image: 'images/students/student4.jpg',
+                image: 'images/students/student4.png',
                 category: 'Categoria B'
             },
             {
-                image: 'images/students/student5.jpg',
+                image: 'images/students/student5.png',
                 category: 'Categoria CE'
             }
         ];
