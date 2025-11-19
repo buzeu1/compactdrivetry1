@@ -1410,6 +1410,7 @@
             }
         }
 
+        /* MOBILE OPTIMIZED - 768px and below */
         @media (max-width: 768px) {
             .mobile-menu-toggle {
                 display: flex;
@@ -1437,83 +1438,150 @@
                 margin-left: 0 !important;
             }
 
+            /* Hero Section - Mobile Optimized */
             .hero {
-                padding: 80px 1.5rem 30px;
+                padding: 100px 1.5rem 40px;
+                min-height: auto;
+            }
+
+            .hero-container {
+                grid-template-columns: 1fr;
+                gap: 2.5rem;
+            }
+
+            .hero-content {
+                text-align: center;
+                padding-right: 0;
+                order: 1;
+            }
+
+            .hero-gallery {
+                order: 2;
+                max-width: 100%;
+                padding: 1.5rem;
+                margin-top: 1rem;
             }
 
             .hero h1 {
-                font-size: 1.9rem;
+                font-size: 2rem;
+                line-height: 1.2;
+                margin-bottom: 1rem;
             }
 
             .hero-subtitle {
                 font-size: 1.1rem;
+                margin-bottom: 1rem;
             }
 
             .hero-description {
                 font-size: 0.95rem;
+                line-height: 1.6;
+                margin-bottom: 1.5rem;
             }
 
-            .hero-gallery {
-                max-width: 100%;
-                padding: 1.2rem;
+            .hero-badge {
+                font-size: 0.75rem;
+                padding: 0.6rem 1.3rem;
+                margin-bottom: 1rem;
             }
 
+            .hero-buttons {
+                justify-content: center;
+                margin-top: 1.5rem;
+            }
+
+            /* Stats - Mobile 3 columns */
+            .stats-container {
+                grid-template-columns: repeat(3, 1fr);
+                gap: 0.7rem;
+                margin: 1.5rem 0;
+            }
+
+            .stat-card {
+                padding: 1rem 0.8rem;
+            }
+
+            .stat-number {
+                font-size: 1.6rem;
+            }
+
+            .stat-label {
+                font-size: 0.7rem;
+            }
+
+            /* Gallery - Mobile Optimized */
             .gallery-image {
-                height: 340px;
+                height: 300px;
             }
 
             .gallery-title {
                 font-size: 1.2rem;
             }
 
+            .gallery-subtitle {
+                font-size: 0.85rem;
+            }
+
             .gallery-category {
                 font-size: 1.1rem;
             }
 
-            .stats-container {
-                grid-template-columns: 1fr;
-                gap: 0.8rem;
+            .gallery-btn {
+                width: 38px;
+                height: 38px;
+                font-size: 0.9rem;
             }
 
-            .stat-card {
-                padding: 1.2rem;
+            .dot {
+                width: 6px;
+                height: 6px;
             }
 
-            .stat-number {
-                font-size: 1.8rem;
-            }
-
+            /* Services */
             .vehicles-grid,
             .instructors-grid {
                 grid-template-columns: 1fr;
+                gap: 1.5rem;
             }
 
-            .map-info {
-                flex-direction: column;
-                text-align: center;
+            .vehicle-card {
+                padding: 2rem;
             }
 
+            .vehicle-icon {
+                width: 75px;
+                height: 75px;
+                font-size: 2rem;
+            }
+
+            /* Story Section */
             .story-section {
-                padding: 80px 1.5rem;
+                padding: 70px 1.5rem;
             }
 
             .story-left p {
-                font-size: 1rem;
+                font-size: 0.95rem;
+                line-height: 1.7;
+                margin-bottom: 1.2rem;
             }
 
             .highlight-item {
-                padding: 1.3rem;
-                gap: 1.3rem;
+                padding: 1.2rem;
+                gap: 1.2rem;
             }
 
             .highlight-icon {
-                width: 55px;
-                height: 55px;
-                font-size: 1.6rem;
+                width: 50px;
+                height: 50px;
+                font-size: 1.5rem;
             }
 
             .highlight-text h4 {
-                font-size: 1.1rem;
+                font-size: 1.05rem;
+            }
+
+            .highlight-text p {
+                font-size: 0.88rem;
             }
 
             .story-stats {
@@ -1521,29 +1589,102 @@
             }
 
             .story-stats h3 {
-                font-size: 1.6rem;
+                font-size: 1.5rem;
+                margin-bottom: 2rem;
+            }
+
+            .timeline {
+                gap: 1.5rem;
+            }
+
+            .timeline-item {
+                gap: 1.2rem;
+                padding-bottom: 1.2rem;
             }
 
             .timeline-year {
-                font-size: 2rem;
-                min-width: 75px;
+                font-size: 1.8rem;
+                min-width: 70px;
             }
 
             .timeline-content h4 {
-                font-size: 1.05rem;
+                font-size: 1rem;
             }
 
             .timeline-content p {
-                font-size: 0.9rem;
+                font-size: 0.88rem;
             }
 
+            /* Instructors */
+            .instructor-card {
+                max-width: 100%;
+            }
+
+            .instructor-image {
+                height: 220px;
+                font-size: 3.5rem;
+            }
+
+            .instructor-info {
+                padding: 1.5rem;
+            }
+
+            .instructor-name {
+                font-size: 1.2rem;
+            }
+
+            /* Testimonials */
+            .testimonial-card {
+                padding: 2rem 1.5rem;
+            }
+
+            .testimonial-text {
+                font-size: 1.05rem;
+                line-height: 1.7;
+            }
+
+            .author-image {
+                width: 55px;
+                height: 55px;
+                font-size: 1.1rem;
+            }
+
+            .testimonial-btn {
+                width: 45px;
+                height: 45px;
+                font-size: 1.1rem;
+            }
+
+            /* Map */
+            .map-section {
+                padding: 60px 1.5rem;
+            }
+
+            .map-info {
+                flex-direction: column;
+                text-align: center;
+                padding: 1.5rem;
+                gap: 1.2rem;
+            }
+
+            .map-info h3 {
+                font-size: 1.1rem;
+                flex-direction: column;
+                gap: 0.5rem;
+            }
+
+            .map-frame {
+                height: 350px;
+            }
+
+            /* Contact Section */
             .contact-section {
-                padding: 80px 1.5rem;
+                padding: 70px 1.5rem;
             }
 
             .contact-card {
                 padding: 1.5rem;
-                gap: 1.5rem;
+                gap: 1.3rem;
             }
 
             .contact-icon {
@@ -1552,8 +1693,33 @@
                 font-size: 1.3rem;
             }
 
+            .contact-details h3 {
+                font-size: 1.1rem;
+            }
+
+            .contact-details p {
+                font-size: 0.95rem;
+            }
+
             .contact-form {
                 padding: 2.5rem 1.8rem;
+            }
+
+            .contact-form h3 {
+                font-size: 1.5rem !important;
+            }
+
+            /* Section Headers */
+            .section-header {
+                margin-bottom: 3rem;
+            }
+
+            .section-title {
+                font-size: 2rem;
+            }
+
+            .section-subtitle {
+                font-size: 1rem;
             }
         }
 
@@ -1572,7 +1738,7 @@
             }
 
             .gallery-image {
-                height: 300px;
+                height: 280px;
             }
 
             .btn {
@@ -1581,15 +1747,15 @@
             }
 
             .stat-number {
-                font-size: 1.6rem;
+                font-size: 1.5rem;
             }
 
             .stat-label {
-                font-size: 0.75rem;
+                font-size: 0.65rem;
             }
 
             .story-left p {
-                font-size: 0.95rem;
+                font-size: 0.92rem;
             }
 
             .highlight-item {
@@ -1645,6 +1811,14 @@
             .form-group textarea,
             .form-group select {
                 padding: 0.9rem 1rem;
+                font-size: 0.95rem;
+            }
+
+            .section-title {
+                font-size: 1.8rem;
+            }
+
+            .section-subtitle {
                 font-size: 0.95rem;
             }
         }
@@ -2061,7 +2235,7 @@
                     </div>
                     <div class="contact-details">
                         <h3>Email</h3>
-                        <p><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="05666a6b7164667145666a687564667161776c73602b776a">[email&#160;protected]</a></p>
+                        <p><a href="mailto:contact@compactdrive.ro">contact@compactdrive.ro</a></p>
                     </div>
                 </div>
                 
@@ -2172,7 +2346,7 @@
         </div>
     </footer>
 
-    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+    <script>
         // Loading Screen - NEW
         window.addEventListener('load', function() {
             const loader = document.getElementById('loader');
