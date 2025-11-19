@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Categorii & Prețuri - Compact Drive</title>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+/* --- ROOT (mapped to premium palette you gave) --- */
+:root{
+    /* original variable names preserved but values mapped to your premium palette */
+    /* Dark / background */
+    --dark-bg: #0a0a0a;     /* from --bg-dark */
+    --card-bg: #1a1a1a;     /* from --bg-card */
+
+    /* Primary / accents */
+    --primary-orange: #3b82f6; /* mapped to --primary (blue) */
+    --bright-yellow: #f59e0b;  /* mapped to --secondary (gold) */
+    --electric-blue: #06b6d4;  /* mapped to --accent (teal) */
+    --hot-red: #ef4444;        /* mapped to --danger */
+    --neon-green: #10b981;     /* mapped to --success */
+    --deep-purple: #6B46C1;    /* kept */
+
+    /* neutrals */
+    --white: #ffffff;
+    --light-gray: #a1a1aa; /* a bit darker/muted (from --text-gray) */
+
+    /* gradients (mapped) */
+    --gradient-1: linear-gradient(135deg, #3b82f6 0%, #06b6d4 100%); /* gradient-main */
+    --gradient-hot: linear-gradient(135deg, #3b82f6, #06b6d4, #f59e0b); /* blue -> teal -> gold */
+
+    /* fonts */
+    --font-heading: 'Bebas Neue', cursive;
+    --font-body: 'Poppins', sans-serif;
+
+    /* shadows/glow (kept subtle) */
+    --shadow-sm: 0 2px 8px rgba(0,0,0,0.5);
+    --shadow-md: 0 8px 20px rgba(0,0,0,0.6);
+    --glow-blue: 0 0 20px rgba(59, 130, 246, 0.18);
+}
+
+/* --- REST UL CODULUI (UNCHANGED) --- */
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:var(--font-body);color:var(--white);background:var(--dark-bg);overflow-x:hidden}.animated-bg{position:fixed;width:100%;height:100%;top:0;left:0;z-index:-1;background:var(--dark-bg);overflow:hidden}.animated-bg::before{content:'';position:absolute;width:300%;height:300%;top:-100%;left:-100%;background:radial-gradient(circle at 20% 80%,rgba(59,130,246,.12) 0%,transparent 50%),radial-gradient(circle at 80% 20%,rgba(6,182,212,.08) 0%,transparent 50%),radial-gradient(circle at 40% 60%,rgba(245,158,11,.08) 0%,transparent 50%);animation:bgRotate 40s linear infinite}@keyframes bgRotate{0%{transform:rotate(0deg)}100%{transform:rotate(360deg)}}.header{position:fixed;top:0;left:0;right:0;z-index:9999;background:rgba(10,10,10,.95);backdrop-filter:blur(20px);padding:12px 0;border-bottom:3px solid transparent;background-image:var(--gradient-hot);background-size:200% 200%;animation:gradientShift 5s ease infinite}@keyframes gradientShift{0%,100%{background-position:0% 50%}50%{background-position:100% 50%}}.nav-container{max-width:1400px;margin:0 auto;padding:0 40px;display:flex;justify-content:space-between;align-items:center}.logo-wrapper{display:flex;align-items:center;text-decoration:none;transition:all .3s ease}.logo-wrapper:hover{transform:scale(1.05) rotate(-2deg)}.logo-img{width:70px;height:70px;margin-right:15px;filter:drop-shadow(0 0 15px rgba(59,130,246,.6));animation:logoPulse 3s infinite}@keyframes logoPulse{0%,100%{filter:drop-shadow(0 0 15px rgba(59,130,246,.6))}50%{filter:drop-shadow(0 0 25px rgba(6,182,212,.8))}}.logo-text{font-family:var(--font-heading);font-size:2.5rem;background:var(--gradient-1);-webkit-background-clip:text;-webkit-text-fill-color:transparent;letter-spacing:2px;font-weight:bold}.nav-menu{display:flex;list-style:none;gap:35px;align-items:center}.nav-link{color:var(--white);text-decoration:none;font-weight:600;font-size:14px;padding:.5rem 1rem;border-radius:25px;transition:all .3s ease;position:relative;text-transform:uppercase;letter-spacing:1px}.nav-link::after{content:'';position:absolute;bottom:-5px;left:50%;width:0;height:3px;background:var(--gradient-1);transition:all .3s ease;transform:translateX(-50%)}.nav-link:hover::after{width:100%}.nav-link:hover{color:var(--primary-orange);transform:translateY(-2px)}.btn-order{background:var(--gradient-hot)!important;color:var(--white)!important;padding:.8rem 2rem!important;border-radius:50px!important;font-weight:700!important;box-shadow:0 5px 20px rgba(59,130,246,.25);transition:all .3s ease!important;animation:ctaPulse 2s infinite}@keyframes ctaPulse{0%,100%{box-shadow:0 5px 20px rgba(59,130,246,.25)}50%{box-shadow:0 8px 30px rgba(6,182,212,.22)}}.mobile-menu-toggle{display:none;flex-direction:column;gap:4px;background:transparent;border:none;cursor:pointer;padding:5px}.mobile-menu-toggle span{width:30px;height:3px;background:var(--bright-yellow);border-radius:3px;transition:all .3s ease}.menu-hero{margin-top:75px;padding:50px 40px 30px;background:var(--gradient-hot);text-align:center;position:relative;overflow:hidden}.menu-hero::before{content:'🚗';position:absolute;font-size:30rem;opacity:.05;top:50%;left:50%;transform:translate(-50%,-50%) rotate(-15deg)}.menu-hero-title{font-family:var(--font-heading);font-size:3.5rem;color:var(--white);margin-bottom:15px;letter-spacing:3px}.menu-hero-subtitle{font-size:1.1rem;color:rgba(255,255,255,.85)}.categories-section{padding:30px 40px;background:var(--card-bg);border-bottom:3px solid var(--primary-orange);position:sticky;top:85px;z-index:100;box-shadow:0 5px 20px rgba(0,0,0,.3)}.menu-categories{display:flex;justify-content:center;gap:10px;flex-wrap:wrap;max-width:1200px;margin:0 auto}.category-btn{padding:10px 22px;background:transparent;border:2px solid var(--light-gray);color:rgba(255,255,255,.85);border-radius:50px;cursor:pointer;font-weight:600;font-size:.9rem;transition:all .3s ease;text-transform:uppercase;letter-spacing:1px}.category-btn.active{background:var(--gradient-1);color:var(--white);border-color:var(--primary-orange);box-shadow:0 5px 15px rgba(59,130,246,.12)}.category-btn:hover:not(.active){border-color:var(--primary-orange);color:var(--primary-orange)}.menu-section{padding:40px;max-width:1400px;margin:0 auto}.menu-category-title{font-family:var(--font-heading);font-size:2.5rem;background:var(--gradient-hot);-webkit-background-clip:text;-webkit-text-fill-color:transparent;letter-spacing:2px;margin:40px 0 25px;text-align:center;position:relative;scroll-margin-top:180px}.menu-category-title::after{content:'';position:absolute;bottom:-10px;left:50%;transform:translateX(-50%);width:80px;height:3px;background:var(--gradient-1);border-radius:2px}.vehicles-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:2rem;margin-bottom:50px}.vehicle-card{position:relative;border-radius:20px;overflow:hidden;cursor:pointer;transition:all .3s ease;scroll-margin-top:180px;box-shadow:0 5px 20px rgba(0,0,0,.3)}.vehicle-card:hover{transform:translateY(-10px) scale(1.02);box-shadow:0 15px 40px rgba(59,130,246,.12)}.vehicle-image-wrapper{position:relative;width:100%;height:350px;overflow:hidden}.vehicle-image{width:100%;height:100%;object-fit:cover;transition:transform .3s ease;background:linear-gradient(135deg, rgba(59,130,246,.12), var(--card-bg))}.vehicle-card:hover .vehicle-image{transform:scale(1.06)}.vehicle-info-overlay{position:absolute;bottom:0;left:0;right:0;background:linear-gradient(to top,rgba(0,0,0,.95) 0%,rgba(0,0,0,.7) 70%,transparent 100%);padding:2rem 1.5rem 1.5rem;display:flex;flex-direction:column;gap:.5rem}.vehicle-name{font-family:var(--font-heading);font-size:1.8rem;color:var(--bright-yellow);text-transform:uppercase;letter-spacing:1px}.vehicle-specs{font-size:.85rem;color:rgba(255,255,255,.8)}.pricing-box{margin-top:.5rem;display:flex;align-items:baseline;gap:.5rem}.price-label{font-size:.8rem;color:rgba(255,255,255,.8);text-transform:uppercase;letter-spacing:1px}.price-amount{font-family:var(--font-heading);font-size:2.2rem;color:var(--white);text-shadow:2px 2px 6px rgba(0,0,0,.6)}.price-currency{font-size:1.2rem;margin-left:.3rem}.cta-section{background:var(--gradient-hot);border-radius:30px;padding:4rem;text-align:center;margin:80px 0;position:relative;overflow:hidden;box-shadow:0 20px 40px rgba(59,130,246,.08)}.cta-section::before{content:'🎯';position:absolute;font-size:15rem;opacity:.06;top:50%;right:-50px;transform:translateY(-50%) rotate(15deg)}.cta-title{font-size:3rem;font-weight:800;color:var(--white);margin-bottom:1rem;text-transform:uppercase;letter-spacing:2px}.cta-text{font-size:1.3rem;color:var(--white);margin-bottom:2rem;opacity:.95}.cta-buttons{display:flex;gap:2rem;justify-content:center;flex-wrap:wrap}.btn-cta{padding:1.2rem 3rem;border-radius:50px;font-weight:700;text-decoration:none;font-size:1.1rem;text-transform:uppercase;letter-spacing:1px;transition:all .3s ease;display:inline-flex;align-items:center;gap:.5rem}.btn-primary{background:var(--white);color:var(--primary-orange);box-shadow:0 5px 20px rgba(255,255,255,.06)}.btn-primary:hover{transform:translateY(-3px) scale(1.03)}.btn-secondary{background:transparent;color:var(--white);border:3px solid var(--white)}.btn-secondary:hover{background:var(--white);color:var(--primary-orange);transform:translateY(-3px) scale(1.03)}.footer{background:var(--dark-bg);padding:50px 40px 30px;border-top:3px solid var(--gradient-hot);border-image:var(--gradient-hot) 1}.footer-content{max-width:1200px;margin:0 auto;text-align:center}.footer-text{color:rgba(255,255,255,.7);font-size:1rem;margin-bottom:1rem}.footer-links{display:flex;justify-content:center;gap:2rem;flex-wrap:wrap;margin-bottom:2rem}.footer-links a{color:rgba(255,255,255,.78);text-decoration:none;transition:color .3s ease;font-weight:600}.footer-links a:hover{color:var(--primary-orange)}@media (max-width:992px){.nav-menu{position:fixed;top:0;right:-100%;width:300px;height:100vh;background:var(--dark-bg);flex-direction:column;justify-content:start;padding:100px 30px;box-shadow:0 0 20px rgba(0,0,0,.5);transition:right .3s ease}.nav-menu.active{right:0}.mobile-menu-toggle{display:flex}.vehicles-grid{grid-template-columns:1fr}.logo-text{font-size:1.8rem}}@media (max-width:768px){.menu-hero-title{font-size:2.5rem}.menu-category-title{font-size:2rem}.menu-section{padding:30px 20px}.cta-section{padding:2rem}.cta-title{font-size:2rem}.logo-text{font-size:1.5rem}}
+    </style>
+</head>
+<body>
+<div class="animated-bg"></div>
+
+<header class="header">
+<nav class="nav-container">
+<a href="compact-drive-index.html" class="logo-wrapper">
+<img src="/mnt/user-data/uploads/Logo_dinamic_Compact_Drive.png" alt="Compact Drive" class="logo-img">
+<span class="logo-text">COMPACT DRIVE</span>
+</a>
+<ul class="nav-menu" id="navMenu">
+<li><a href="compact-drive-index.html" class="nav-link">Acasă</a></li>
+<li><a href="#categorii" class="nav-link">Categorii</a></li>
+<li><a href="#preturi" class="nav-link">Prețuri</a></li>
+<li><a href="compact-drive-index.html#instructori" class="nav-link">Instructori</a></li>
+<li><a href="compact-drive-index.html#contact" class="btn-order">Înscrie-te</a></li>
+</ul>
+<button class="mobile-menu-toggle" id="mobileMenuToggle">
+<span></span><span></span><span></span>
+</button>
+</nav>
+</header>
+
+<section class="menu-hero">
+<h1 class="menu-hero-title">CATEGORII & PREȚURI</h1>
+<p class="menu-hero-subtitle">Cele mai bune prețuri din Roman pentru fiecare categorie</p>
+</section>
+
+<section class="categories-section" id="categorii">
+<div class="menu-categories">
+<button class="category-btn active" data-category="all">Toate</button>
+<button class="category-btn" data-category="cat-a">🏍️ Categoria A/A2</button>
+<button class="category-btn" data-category="cat-b">🚗 Categoria B</button>
+<button class="category-btn" data-category="cat-c">🚚 Categoria C/CE</button>
+<button class="category-btn" data-category="cat-d">🚌 Categoria D</button>
+</div>
+</section>
+
+<section class="menu-section">
+<h2 class="menu-category-title" id="cat-a-title">🏍️ CATEGORIA A/A2</h2>
+<p style="text-align:center;color:rgba(255,255,255,.7);margin-bottom:2rem;font-size:1.1rem">Libertatea pe două roți începe aici! Pregătire profesională pentru motociclete și scutere.</p>
+
+<div class="vehicles-grid">
+<div class="vehicle-card" data-category="cat-a">
+<div class="vehicle-image-wrapper">
+<div class="vehicle-image">🏍️</div>
+<div class="vehicle-info-overlay">
+<h3 class="vehicle-name">Yamaha MT-07</h3>
+<p class="vehicle-specs">Motor: 689cc | Putere: 73.4 CP | ABS Standard</p>
+<div class="pricing-box">
+<span class="price-label">De la</span>
+<span class="price-amount">1200<span class="price-currency">RON</span></span>
+</div>
+</div>
+</div>
+</div>
+
+<div class="vehicle-card" data-category="cat-a">
+<div class="vehicle-image-wrapper">
+<div class="vehicle-image">🛵</div>
+<div class="vehicle-info-overlay">
+<h3 class="vehicle-name">Honda PCX 125</h3>
+<p class="vehicle-specs">Motor: 125cc | Automatic | Consum: 2.1L/100km</p>
+<div class="pricing-box">
+<span class="price-label">De la</span>
+<span class="price-amount">1000<span class="price-currency">RON</span></span>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<h2 class="menu-category-title" id="cat-b-title">🚗 CATEGORIA B</h2>
+<p style="text-align:center;color:rgba(255,255,255,.7);margin-bottom:2rem;font-size:1.1rem">Cea mai populară categorie! Învață să conduci cu mașini moderne, dotate cu toate sistemele de siguranță.</p>
+
+<div class="vehicles-grid">
+<div class="vehicle-card" data-category="cat-b">
+<div class="vehicle-image-wrapper">
+<div class="vehicle-image">🚗</div>
+<div class="vehicle-info-overlay">
+<h3 class="vehicle-name">Volkswagen Golf 8</h3>
+<p class="vehicle-specs">Motor: 1.5 TSI | 130 CP | Manual 6 trepte</p>
+<div class="pricing-box">
+<span class="price-label">De la</span>
+<span class="price-amount">1800<span class="price-currency">RON</span></span>
+</div>
+</div>
+</div>
+</div>
+
+<div class="vehicle-card" data-category="cat-b">
+<div class="vehicle-image-wrapper">
+<div class="vehicle-image">🚙</div>
+<div class="vehicle-info-overlay">
+<h3 class="vehicle-name">Renault Clio 5</h3>
+<p class="vehicle-specs">Motor: 1.0 TCe | 100 CP | Manual 5 trepte</p>
+<div class="pricing-box">
+<span class="price-label">Promo</span>
+<span class="price-amount">1700<span class="price-currency">RON</span></span>
+</div>
+</div>
+</div>
+</div>
+
+<div class="vehicle-card" data-category="cat-b">
+<div class="vehicle-image-wrapper">
+<div class="vehicle-image">🚗</div>
+<div class="vehicle-info-overlay">
+<h3 class="vehicle-name">Toyota Corolla Hybrid</h3>
+<p class="vehicle-specs">Motor: Hybrid | CVT Automatic | Eco-friendly</p>
+<div class="pricing-box">
+<span class="price-label">Automat</span>
+<span class="price-amount">2000<span class="price-currency">RON</span></span>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<h2 class="menu-category-title" id="cat-c-title">🚚 CATEGORIA C/CE</h2>
+<p style="text-align:center;color:rgba(255,255,255,.7);margin-bottom:2rem;font-size:1.1rem">Pregătire profesională pentru conducători de vehicule de mare tonaj. Camioane moderne Euro 6.</p>
+
+<div class="vehicles-grid">
+<div class="vehicle-card" data-category="cat-c">
+<div class="vehicle-image-wrapper">
+<div class="vehicle-image">🚚</div>
+<div class="vehicle-info-overlay">
+<h3 class="vehicle-name">MAN TGX 18.500</h3>
+<p class="vehicle-specs">Motor: 12.4L | 500 CP | Euro 6 | Automatic</p>
+<div class="pricing-box">
+<span class="price-label">Cat. C</span>
+<span class="price-amount">3500<span class="price-currency">RON</span></span>
+</div>
+</div>
+</div>
+</div>
+
+<div class="vehicle-card" data-category="cat-c">
+<div class="vehicle-image-wrapper">
+<div class="vehicle-image">🚛</div>
+<div class="vehicle-info-overlay">
+<h3 class="vehicle-name">Scania R450 + Remorcă</h3>
+<p class="vehicle-specs">Motor: 13L | 450 CP | Euro 6 | Opticruise</p>
+<div class="pricing-box">
+<span class="price-label">Cat. CE</span>
+<span class="price-amount">4500<span class="price-currency">RON</span></span>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<h2 class="menu-category-title" id="cat-d-title">🚌 CATEGORIA D</h2>
+<p style="text-align:center;color:rgba(255,255,255,.7);margin-bottom:2rem;font-size:1.1rem">Specializare în transportul de persoane. Autobuze și microbuze moderne.</p>
+
+<div class="vehicles-grid">
+<div class="vehicle-card" data-category="cat-d">
+<div class="vehicle-image-wrapper">
+<div class="vehicle-image">🚌</div>
+<div class="vehicle-info-overlay">
+<h3 class="vehicle-name">Mercedes-Benz Citaro</h3>
+<p class="vehicle-specs">12m | 299 CP | Automatic | Low Floor</p>
+<div class="pricing-box">
+<span class="price-label">Cat. D</span>
+<span class="price-amount">4000<span class="price-currency">RON</span></span>
+</div>
+</div>
+</div>
+</div>
+
+<div class="vehicle-card" data-category="cat-d">
+<div class="vehicle-image-wrapper">
+<div class="vehicle-image">🚐</div>
+<div class="vehicle-info-overlay">
+<h3 class="vehicle-name">Ford Transit 17+1</h3>
+<p class="vehicle-specs">2.0 EcoBlue | 170 CP | Manual | 18 locuri</p>
+<div class="pricing-box">
+<span class="price-label">Microbuz</span>
+<span class="price-amount">3500<span class="price-currency">RON</span></span>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="cta-section" id="preturi">
+<h2 class="cta-title">Alege Categoria Ta și Începe Acum!</h2>
+<p class="cta-text">Prețuri transparente, fără costuri ascunse. Rate personalizate disponibile!</p>
+<div class="cta-buttons">
+<a href="compact-drive-index.html#contact" class="btn-cta btn-primary">
+<i class="fas fa-phone"></i> Sună pentru Ofertă
+</a>
+<a href="compact-drive-index.html#contact" class="btn-cta btn-secondary">
+<i class="fas fa-envelope"></i> Trimite Mesaj
+</a>
+</div>
+</div>
+</section>
+
+<footer class="footer">
+<div class="footer-content">
+<p class="footer-text">&copy; 2024 Compact Drive - Școala Ta de Șoferi din Roman</p>
+<div class="footer-links">
+<a href="compact-drive-index.html">Acasă</a>
+<a href="#categorii">Categorii</a>
+<a href="#preturi">Prețuri</a>
+<a href="compact-drive-index.html#contact">Contact</a>
+</div>
+<p class="footer-text">Dezvoltat cu ❤️ de Cosmin Buzău</p>
+</div>
+</footer>
+
+<script>
+const m=document.getElementById('mobileMenuToggle'),n=document.getElementById('navMenu');m.addEventListener('click',()=>{n.classList.toggle('active')});const c=document.querySelectorAll('.category-btn'),i=document.querySelectorAll('.vehicle-card');const categoryMap={'cat-a':'cat-a-title','cat-b':'cat-b-title','cat-c':'cat-c-title','cat-d':'cat-d-title','cat-tr':'cat-tr-title'};c.forEach(b=>{b.addEventListener('click',()=>{c.forEach(x=>x.classList.remove('active'));b.classList.add('active');const t=b.dataset.category;if(t==='all'){i.forEach(e=>e.style.display='block')}else{i.forEach(e=>{e.style.display=e.dataset.category===t?'block':'none'});const titleId=categoryMap[t];if(titleId){const title=document.getElementById(titleId);if(title){title.scrollIntoView({behavior:'smooth',block:'start'})}}}})});document.querySelectorAll('a[href^="#"]').forEach(a=>{a.addEventListener('click',function(e){e.preventDefault();const t=document.querySelector(this.getAttribute('href'));if(t){t.scrollIntoView({behavior:'smooth',block:'start'});n.classList.remove('active')}})});const observerOptions={threshold:.1,rootMargin:'0px 0px -100px 0px'};const observer=new IntersectionObserver((entries)=>{entries.forEach(entry=>{if(entry.isIntersecting){entry.target.style.opacity='0';entry.target.style.transform='translateY(30px)';setTimeout(()=>{entry.target.style.transition='all 0.8s ease';entry.target.style.opacity='1';entry.target.style.transform='translateY(0)'},100);observer.unobserve(entry.target)}})},observerOptions);document.querySelectorAll('.vehicle-card').forEach(card=>{observer.observe(card)});
+</script>
+</body>
+</html>
