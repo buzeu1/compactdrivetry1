@@ -599,7 +599,7 @@
 
         /* Story Section - NEW */
         .story-section {
-            padding: 120px 2rem;
+            padding: 100px 2rem;
             background: linear-gradient(135deg, var(--bg-dark) 0%, var(--bg-card) 100%);
             position: relative;
             overflow: hidden;
@@ -608,7 +608,7 @@
         .story-section::before {
             content: '🏆';
             position: absolute;
-            font-size: 25rem;
+            font-size: 20rem;
             opacity: 0.02;
             top: 50%;
             right: -100px;
@@ -620,14 +620,14 @@
             margin: 0 auto;
             display: grid;
             grid-template-columns: 1.2fr 1fr;
-            gap: 6rem;
+            gap: 5rem;
             align-items: start;
         }
 
         .story-content h2 {
             font-family: 'Raleway', sans-serif;
-            font-size: 3.5rem;
-            margin-bottom: 2rem;
+            font-size: 2.8rem;
+            margin-bottom: 1.5rem;
             background: var(--gradient-main);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
@@ -636,68 +636,68 @@
         }
 
         .story-content p {
-            font-size: 1.15rem;
-            line-height: 2;
+            font-size: 1.05rem;
+            line-height: 1.8;
             color: var(--text-gray);
-            margin-bottom: 2rem;
+            margin-bottom: 1.5rem;
         }
 
         .story-highlights {
             display: grid;
-            gap: 2rem;
-            margin-top: 3.5rem;
+            gap: 1.5rem;
+            margin-top: 2.5rem;
         }
 
         .highlight-item {
             display: flex;
             align-items: start;
-            gap: 2rem;
-            padding: 2rem;
+            gap: 1.5rem;
+            padding: 1.5rem;
             background: var(--bg-card);
-            border-radius: 24px;
-            border-left: 5px solid var(--primary);
+            border-radius: 20px;
+            border-left: 4px solid var(--primary);
             transition: all 0.3s ease;
             box-shadow: var(--shadow-sm);
         }
 
         .highlight-item:hover {
-            transform: translateX(15px);
+            transform: translateX(10px);
             background: var(--bg-light);
             border-left-color: var(--secondary);
             box-shadow: var(--shadow-md);
         }
 
         .highlight-icon {
-            width: 70px;
-            height: 70px;
+            width: 60px;
+            height: 60px;
             background: var(--gradient-main);
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 2rem;
+            font-size: 1.8rem;
             flex-shrink: 0;
             box-shadow: var(--glow-blue);
         }
 
         .highlight-text h4 {
-            font-size: 1.4rem;
-            margin-bottom: 0.8rem;
+            font-size: 1.2rem;
+            margin-bottom: 0.5rem;
             color: var(--text-light);
             font-weight: 700;
         }
 
         .highlight-text p {
-            font-size: 1.05rem;
+            font-size: 0.95rem;
             color: var(--text-gray);
             margin: 0;
-            line-height: 1.7;
+            line-height: 1.6;
         }
 
         .story-stats {
             background: var(--bg-card);
-            border-radius: 30px;
-            padding: 3.5rem;
+            border-radius: 24px;
+            padding: 2.5rem;
             box-shadow: var(--shadow-xl);
             border: 2px solid rgba(255, 255, 255, 0.05);
             position: sticky;
@@ -705,8 +705,8 @@
         }
 
         .story-stats h3 {
-            font-size: 2.2rem;
-            margin-bottom: 3rem;
+            font-size: 1.8rem;
+            margin-bottom: 2.5rem;
             text-align: center;
             color: var(--text-light);
             font-weight: 800;
@@ -714,14 +714,14 @@
 
         .timeline {
             display: grid;
-            gap: 2.5rem;
+            gap: 2rem;
         }
 
         .timeline-item {
             display: flex;
-            gap: 2rem;
+            gap: 1.5rem;
             align-items: start;
-            padding-bottom: 2rem;
+            padding-bottom: 1.5rem;
             border-bottom: 1px solid rgba(255, 255, 255, 0.05);
         }
 
@@ -731,18 +731,18 @@
         }
 
         .timeline-year {
-            font-size: 3rem;
+            font-size: 2.5rem;
             font-weight: 900;
             background: var(--gradient-gold);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
-            min-width: 120px;
+            min-width: 100px;
             line-height: 1;
         }
 
         .timeline-content h4 {
-            font-size: 1.35rem;
-            margin-bottom: 0.6rem;
+            font-size: 1.15rem;
+            margin-bottom: 0.5rem;
             color: var(--text-light);
             font-weight: 700;
         }
@@ -750,8 +750,8 @@
         .timeline-content p {
             color: var(--text-gray);
             margin: 0;
-            font-size: 1.05rem;
-            line-height: 1.6;
+            font-size: 0.95rem;
+            line-height: 1.5;
         }
 
         /* Services Section - MODIFIED */
@@ -1420,7 +1420,11 @@
             }
 
             .story-content h2 {
-                font-size: 2.8rem;
+                font-size: 2.5rem;
+            }
+
+            .story-content p {
+                font-size: 1.05rem;
             }
         }
 
@@ -1512,43 +1516,47 @@
             }
 
             .story-content h2 {
-                font-size: 2.2rem;
+                font-size: 2.4rem;
             }
 
             .story-content p {
-                font-size: 1.05rem;
+                font-size: 1rem;
             }
 
             .highlight-item {
-                padding: 1.5rem;
-                gap: 1.5rem;
+                padding: 1.3rem;
+                gap: 1.3rem;
             }
 
             .highlight-icon {
-                width: 60px;
-                height: 60px;
-                font-size: 1.8rem;
+                width: 55px;
+                height: 55px;
+                font-size: 1.6rem;
             }
 
             .highlight-text h4 {
-                font-size: 1.2rem;
+                font-size: 1.1rem;
             }
 
             .story-stats {
-                padding: 2.5rem 1.5rem;
+                padding: 2rem 1.5rem;
             }
 
             .story-stats h3 {
-                font-size: 1.8rem;
+                font-size: 1.6rem;
             }
 
             .timeline-year {
-                font-size: 2.2rem;
-                min-width: 80px;
+                font-size: 2rem;
+                min-width: 75px;
             }
 
             .timeline-content h4 {
-                font-size: 1.15rem;
+                font-size: 1.05rem;
+            }
+
+            .timeline-content p {
+                font-size: 0.9rem;
             }
 
             .contact-section {
@@ -1603,21 +1611,32 @@
             }
 
             .story-content h2 {
-                font-size: 1.9rem;
+                font-size: 1.8rem;
             }
 
             .story-content p {
-                font-size: 1rem;
+                font-size: 0.95rem;
             }
 
             .highlight-item {
                 flex-direction: column;
                 text-align: center;
-                padding: 1.5rem;
+                padding: 1.3rem;
             }
 
             .highlight-icon {
                 margin: 0 auto;
+                width: 50px;
+                height: 50px;
+                font-size: 1.5rem;
+            }
+
+            .highlight-text h4 {
+                font-size: 1rem;
+            }
+
+            .highlight-text p {
+                font-size: 0.9rem;
             }
 
             .timeline-item {
@@ -1627,7 +1646,15 @@
             }
 
             .timeline-year {
-                font-size: 2rem;
+                font-size: 1.8rem;
+            }
+
+            .timeline-content h4 {
+                font-size: 1rem;
+            }
+
+            .timeline-content p {
+                font-size: 0.85rem;
             }
 
             .contact-card {
@@ -1806,21 +1833,21 @@
                         <div class="timeline-year">2021</div>
                         <div class="timeline-content">
                             <h4>Creștere Rapidă</h4>
-                            <p>Peste 150 de absolvenți și introducerea tehnologiei moderne</p>
+                            <p>Peste 500 de absolvenți și introducerea tehnologiei moderne</p>
                         </div>
                     </div>
                     <div class="timeline-item">
                         <div class="timeline-year">2023</div>
                         <div class="timeline-content">
                             <h4>Lider de Piață</h4>
-                            <p>Școala #1 din Roman cu peste 250 de absolvenți</p>
+                            <p>Școala #1 din Roman cu peste 2000 de absolvenți</p>
                         </div>
                     </div>
                     <div class="timeline-item">
                         <div class="timeline-year">2025</div>
                         <div class="timeline-content">
                             <h4>Excelență Continuă</h4>
-                            <p>500+ absolvenți fericiți și 98% rată de promovare</p>
+                            <p>5000+ absolvenți fericiți și 98% rată de promovare</p>
                         </div>
                     </div>
                 </div>
