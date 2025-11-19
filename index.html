@@ -618,43 +618,35 @@
         .story-container {
             max-width: 1400px;
             margin: 0 auto;
+        }
+
+        .story-grid {
             display: grid;
-            grid-template-columns: 1.2fr 1fr;
+            grid-template-columns: 1fr 1fr;
             gap: 5rem;
             align-items: start;
         }
 
-        .story-content h2 {
-            font-family: 'Raleway', sans-serif;
-            font-size: 2.8rem;
-            margin-bottom: 1.5rem;
-            background: var(--gradient-main);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            font-weight: 900;
-            line-height: 1.2;
-        }
-
-        .story-content p {
-            font-size: 1.05rem;
-            line-height: 1.8;
+        .story-left p {
+            font-size: 0.95rem;
+            line-height: 1.7;
             color: var(--text-gray);
-            margin-bottom: 1.5rem;
+            margin-bottom: 1.3rem;
         }
 
         .story-highlights {
             display: grid;
-            gap: 1.5rem;
-            margin-top: 2.5rem;
+            gap: 1.3rem;
+            margin-top: 2rem;
         }
 
         .highlight-item {
             display: flex;
             align-items: start;
-            gap: 1.5rem;
-            padding: 1.5rem;
+            gap: 1.3rem;
+            padding: 1.3rem;
             background: var(--bg-card);
-            border-radius: 20px;
+            border-radius: 18px;
             border-left: 4px solid var(--primary);
             transition: all 0.3s ease;
             box-shadow: var(--shadow-sm);
@@ -668,30 +660,30 @@
         }
 
         .highlight-icon {
-            width: 60px;
-            height: 60px;
+            width: 55px;
+            height: 55px;
             background: var(--gradient-main);
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 1.8rem;
+            font-size: 1.6rem;
             flex-shrink: 0;
             box-shadow: var(--glow-blue);
         }
 
         .highlight-text h4 {
-            font-size: 1.2rem;
-            margin-bottom: 0.5rem;
+            font-size: 1.1rem;
+            margin-bottom: 0.4rem;
             color: var(--text-light);
             font-weight: 700;
         }
 
         .highlight-text p {
-            font-size: 0.95rem;
+            font-size: 0.88rem;
             color: var(--text-gray);
             margin: 0;
-            line-height: 1.6;
+            line-height: 1.5;
         }
 
         .story-stats {
@@ -700,8 +692,7 @@
             padding: 2.5rem;
             box-shadow: var(--shadow-xl);
             border: 2px solid rgba(255, 255, 255, 0.05);
-            position: sticky;
-            top: 120px;
+            height: fit-content;
         }
 
         .story-stats h3 {
@@ -1378,7 +1369,7 @@
 
         @media (max-width: 1024px) {
             .hero-container,
-            .story-container {
+            .story-grid {
                 grid-template-columns: 1fr;
                 gap: 3rem;
             }
@@ -1414,16 +1405,7 @@
                 gap: 3rem;
             }
 
-            .story-stats {
-                position: relative;
-                top: 0;
-            }
-
-            .story-content h2 {
-                font-size: 2.5rem;
-            }
-
-            .story-content p {
+            .story-left p {
                 font-size: 1.05rem;
             }
         }
@@ -1515,11 +1497,7 @@
                 padding: 80px 1.5rem;
             }
 
-            .story-content h2 {
-                font-size: 2.4rem;
-            }
-
-            .story-content p {
+            .story-left p {
                 font-size: 1rem;
             }
 
@@ -1610,11 +1588,7 @@
                 font-size: 0.75rem;
             }
 
-            .story-content h2 {
-                font-size: 1.8rem;
-            }
-
-            .story-content p {
+            .story-left p {
                 font-size: 0.95rem;
             }
 
@@ -1780,74 +1754,80 @@
 
     <!-- Story Section - NEW -->
     <section class="story-section" id="povestea">
+        <div class="section-header">
+            <h2 class="section-title">Povestea Noastră</h2>
+            <p class="section-subtitle">Călătoria noastră spre excelență în educația rutieră</p>
+        </div>
+        
         <div class="story-container">
-            <div class="story-content">
-                <h2>Povestea Noastră</h2>
-                <p>
-                    Compact Drive a luat naștere în 2020 din dorința de a revoluționa educația rutieră în Roman. 
-                    Pornind cu o viziune clară și o pasiune autentică pentru siguranța rutieră, am reușit să creăm 
-                    cea mai inovativă și apreciată școală de șoferi din oraș.
-                </p>
-                <p>
-                    În doar câțiva ani, am format mii de șoferi responsabili și am devenit lider de piață, 
-                    fiind recunoscuți pentru standardele înalte, instructorii dedicați, metodele moderne de predare 
-                    și rata excepțională de promovare de 98%. Fiecare elev este o poveste de succes!
-                </p>
+            <div class="story-grid">
+                <div class="story-left">
+                    <p>
+                        Compact Drive a luat naștere în 2020 din dorința de a revoluționa educația rutieră în Roman. 
+                        Pornind cu o viziune clară și o pasiune autentică pentru siguranța rutieră, am reușit să creăm 
+                        cea mai inovativă și apreciată școală de șoferi din oraș.
+                    </p>
+                    <p>
+                        În doar câțiva ani, am format mii de șoferi responsabili și am devenit lider de piață, 
+                        fiind recunoscuți pentru standardele înalte, instructorii dedicați, metodele moderne de predare 
+                        și rata excepțională de promovare de 98%. Fiecare elev este o poveste de succes!
+                    </p>
 
-                <div class="story-highlights">
-                    <div class="highlight-item">
-                        <div class="highlight-icon">🎯</div>
-                        <div class="highlight-text">
-                            <h4>Misiunea Noastră</h4>
-                            <p>Să formăm cei mai buni și mai responsabili conducători auto din România, printr-o abordare modernă și personalizată</p>
+                    <div class="story-highlights">
+                        <div class="highlight-item">
+                            <div class="highlight-icon">🎯</div>
+                            <div class="highlight-text">
+                                <h4>Misiunea Noastră</h4>
+                                <p>Să formăm cei mai buni și mai responsabili conducători auto din România, printr-o abordare modernă și personalizată</p>
+                            </div>
                         </div>
-                    </div>
-                    <div class="highlight-item">
-                        <div class="highlight-icon">💡</div>
-                        <div class="highlight-text">
-                            <h4>Viziunea Noastră</h4>
-                            <p>Să devenim standardul de excelență în educația rutieră prin tehnologie de ultimă oră și metode inovatoare</p>
+                        <div class="highlight-item">
+                            <div class="highlight-icon">💡</div>
+                            <div class="highlight-text">
+                                <h4>Viziunea Noastră</h4>
+                                <p>Să devenim standardul de excelență în educația rutieră prin tehnologie de ultimă oră și metode inovatoare</p>
+                            </div>
                         </div>
-                    </div>
-                    <div class="highlight-item">
-                        <div class="highlight-icon">❤️</div>
-                        <div class="highlight-text">
-                            <h4>Valorile Noastre</h4>
-                            <p>Profesionalism autentic, dedicare totală, răbdare nelimitată și respect profund pentru fiecare elev</p>
+                        <div class="highlight-item">
+                            <div class="highlight-icon">❤️</div>
+                            <div class="highlight-text">
+                                <h4>Valorile Noastre</h4>
+                                <p>Profesionalism autentic, dedicare totală, răbdare nelimitată și respect profund pentru fiecare elev</p>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
 
-            <div class="story-stats">
-                <h3>Parcursul Nostru</h3>
-                <div class="timeline">
-                    <div class="timeline-item">
-                        <div class="timeline-year">2020</div>
-                        <div class="timeline-content">
-                            <h4>Începutul Aventurii</h4>
-                            <p>Lansare oficială și primii 100 de elevi încrezători</p>
+                <div class="story-stats">
+                    <h3>Parcursul Nostru</h3>
+                    <div class="timeline">
+                        <div class="timeline-item">
+                            <div class="timeline-year">2020</div>
+                            <div class="timeline-content">
+                                <h4>Începutul Aventurii</h4>
+                                <p>Lansare oficială și primii 100 de elevi încrezători</p>
+                            </div>
                         </div>
-                    </div>
-                    <div class="timeline-item">
-                        <div class="timeline-year">2021</div>
-                        <div class="timeline-content">
-                            <h4>Creștere Rapidă</h4>
-                            <p>Peste 500 de absolvenți și introducerea tehnologiei moderne</p>
+                        <div class="timeline-item">
+                            <div class="timeline-year">2021</div>
+                            <div class="timeline-content">
+                                <h4>Creștere Rapidă</h4>
+                                <p>Peste 500 de absolvenți și introducerea tehnologiei moderne</p>
+                            </div>
                         </div>
-                    </div>
-                    <div class="timeline-item">
-                        <div class="timeline-year">2023</div>
-                        <div class="timeline-content">
-                            <h4>Lider de Piață</h4>
-                            <p>Școala #1 din Roman cu peste 2000 de absolvenți</p>
+                        <div class="timeline-item">
+                            <div class="timeline-year">2023</div>
+                            <div class="timeline-content">
+                                <h4>Lider de Piață</h4>
+                                <p>Școala #1 din Roman cu peste 2000 de absolvenți</p>
+                            </div>
                         </div>
-                    </div>
-                    <div class="timeline-item">
-                        <div class="timeline-year">2025</div>
-                        <div class="timeline-content">
-                            <h4>Excelență Continuă</h4>
-                            <p>5000+ absolvenți fericiți și 98% rată de promovare</p>
+                        <div class="timeline-item">
+                            <div class="timeline-year">2025</div>
+                            <div class="timeline-content">
+                                <h4>Excelență Continuă</h4>
+                                <p>5000+ absolvenți fericiți și 98% rată de promovare</p>
+                            </div>
                         </div>
                     </div>
                 </div>
