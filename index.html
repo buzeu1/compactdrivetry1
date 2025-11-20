@@ -1410,38 +1410,33 @@
             }
         }
 
-      /* MOBILE OPTIMIZED - 768px and below */
-@media (max-width: 768px) {
-    .mobile-menu-toggle {
-        display: flex;
-    }
-    
-    .nav-links {
-        display: none;
-        position: fixed;
-        top: 85px;
-        left: 0;
-        width: 100%;
-        background: rgba(10, 10, 10, 0.98);
-        backdrop-filter: blur(20px);
-        flex-direction: column;
-        padding: 2rem;
-        box-shadow: var(--shadow-lg);
-        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-    }
-    
-    .nav-links.active {
-        display: flex;
-    }
-    
-    .nav-cta {
-        margin-left: 0 !important;
-    }
-    
-    /* Hero Section - CENTRAT CORECT */  ← NOU
-    .hero {
-        padding: 90px 1rem 20px 1rem;  ← NOU (cu padding)
-        ...
+        /* MOBILE OPTIMIZED - 768px and below */
+        @media (max-width: 768px) {
+            .mobile-menu-toggle {
+                display: flex;
+            }
+
+            .nav-links {
+                display: none;
+                position: fixed;
+                top: 85px;
+                left: 0;
+                width: 100%;
+                background: rgba(10, 10, 10, 0.98);
+                backdrop-filter: blur(20px);
+                flex-direction: column;
+                padding: 2rem;
+                box-shadow: var(--shadow-lg);
+                border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            }
+
+            .nav-links.active {
+                display: flex;
+            }
+
+            .nav-cta {
+                margin-left: 0 !important;
+            }
 
             /* Hero Section - LIPIT DE STÂNGA */
             .hero {
@@ -2750,4 +2745,3 @@
     </script>
 </body>
 </html>
-
